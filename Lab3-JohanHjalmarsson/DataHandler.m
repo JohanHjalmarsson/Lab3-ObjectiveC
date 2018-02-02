@@ -27,12 +27,13 @@
     }
     return self;
 }
+
 -(void)saveListToUserDefaults {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults setObject:self.toDoList forKey:@"toDoList"];
     [userDefaults setObject:self.haveDoneList forKey:@"haveDoneList"];
 }
-// Man kan alltså inte instansiera en NSMutableArray from userDefaults utan måste allocera och inita och föra över objekten. ??
+
 - (void)setUpListFromUserDefaults {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if ([userDefaults objectForKey:@"toDoList"] && [userDefaults objectForKey:@"haveDoneList"]) {
@@ -45,25 +46,17 @@
         self.haveDoneList = [[NSMutableArray alloc] init];
     }
 }
+
 - (void) refreshList {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     self.tableList = [userDefaults objectForKey:@"tableList"];
 }
-
 
 -(NSMutableArray*)getList {
     NSMutableArray *list = [[NSMutableArray alloc] init];
     [list addObject:self.toDoList];
     [list addObject:self.haveDoneList];
     return list;
-}
-
--(NSObject*)taskDone:(int)listIndex {
-    NSObject *task = [self.toDoList objectAtIndex:listIndex];
-    [self.toDoList removeObjectAtIndex:listIndex];
-    [self saveListToUserDefaults];
-    //[self setUpListFromUserDefaults];
-    return task;
 }
 
 -(void)taskToHaveDoneList:(NSObject*)task {
@@ -84,6 +77,7 @@
     [self saveListToUserDefaults];
     return task;
 }
+
 -(NSString*)importansString:(BOOL)important {
     NSString *string;
     if (important) {
@@ -107,9 +101,7 @@
 
 -(bool)isImportant:(int)task {
     return [[[self.toDoList objectAtIndex:task] objectAtIndex:1] isEqualToString:self.important];
-    
 }
- 
 
 -(void)addTaskToList:(NSString*)task:(BOOL)important {
     if (important) {
@@ -119,8 +111,8 @@
     }
     [self saveListToUserDefaults];
 }
+
 -(void)taskIsImportant:(BOOL)isImportant index:(int)index {
-   // [[self.toDoList objectAtIndex:index] replaceObjectAtIndex:1 withObject:self.important];
     NSString *string = [[self.toDoList objectAtIndex:index] objectAtIndex:0];
     NSArray *temp;
     if (isImportant) {
@@ -133,6 +125,7 @@
     [self.toDoList insertObject:temp atIndex:index];
     [self saveListToUserDefaults];
 }
+
 -(NSString*)getButtonTitle:(int)id {
     NSString *title;
     switch (id) {
@@ -151,10 +144,8 @@
         default:
             title = @"Error";
     }
-    
     return title;
 }
-
 
 
 @end
