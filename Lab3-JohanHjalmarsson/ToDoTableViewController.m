@@ -61,8 +61,7 @@
     
     cell.textLabel.text = [[[self.dataList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] objectAtIndex:0];
 
-    if ([[[[self.dataList objectAtIndex:indexPath.section] objectAtIndex:indexPath.row] objectAtIndex:1] isEqualToString:@"1"] &&
-        indexPath.section == 0) {
+    if (indexPath.section == 0 &&[self.dataHandler isImportant:(int)indexPath.row]) {
         cell.imageView.image = [UIImage imageNamed:@"circle"];
     } else {
         cell.imageView.image = nil;

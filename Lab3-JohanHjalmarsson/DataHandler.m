@@ -100,7 +100,11 @@
 }
 
 -(bool)isImportant:(int)task {
-    return [[[self.toDoList objectAtIndex:task] objectAtIndex:1] isEqualToString:self.important];
+    bool isImportant = NO;
+    if(self.toDoList){
+        isImportant = [[[self.toDoList objectAtIndex:task] objectAtIndex:1] isEqualToString:self.important];
+    }
+    return isImportant;
 }
 
 -(void)addTaskToList:(NSString*)task:(BOOL)important {
