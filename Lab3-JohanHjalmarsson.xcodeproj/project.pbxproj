@@ -13,6 +13,10 @@
 		04025C9C201B3108004280B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04025C9B201B3108004280B0 /* Assets.xcassets */; };
 		04025C9F201B3108004280B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04025C9D201B3108004280B0 /* LaunchScreen.storyboard */; };
 		04025CA2201B3108004280B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04025CA1201B3108004280B0 /* main.m */; };
+		04025CAA201B3224004280B0 /* ToDoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04025CA9201B3224004280B0 /* ToDoTableViewController.m */; };
+		04025CAD201B323B004280B0 /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04025CAC201B323B004280B0 /* AddTaskViewController.m */; };
+		04025CB0201B3268004280B0 /* DataHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 04025CAF201B3268004280B0 /* DataHandler.m */; };
+		0489B35F2024611200BD29EC /* UIColorConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489B35E2024611200BD29EC /* UIColorConvert.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,14 @@
 		04025C9E201B3108004280B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04025CA0201B3108004280B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04025CA1201B3108004280B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04025CA8201B3224004280B0 /* ToDoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewController.h; sourceTree = "<group>"; };
+		04025CA9201B3224004280B0 /* ToDoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewController.m; sourceTree = "<group>"; };
+		04025CAB201B323B004280B0 /* AddTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
+		04025CAC201B323B004280B0 /* AddTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
+		04025CAE201B3268004280B0 /* DataHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataHandler.h; sourceTree = "<group>"; };
+		04025CAF201B3268004280B0 /* DataHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataHandler.m; sourceTree = "<group>"; };
+		0489B35D2024611200BD29EC /* UIColorConvert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIColorConvert.h; sourceTree = "<group>"; };
+		0489B35E2024611200BD29EC /* UIColorConvert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIColorConvert.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,14 @@
 				04025C9D201B3108004280B0 /* LaunchScreen.storyboard */,
 				04025CA0201B3108004280B0 /* Info.plist */,
 				04025CA1201B3108004280B0 /* main.m */,
+				04025CA8201B3224004280B0 /* ToDoTableViewController.h */,
+				04025CA9201B3224004280B0 /* ToDoTableViewController.m */,
+				04025CAB201B323B004280B0 /* AddTaskViewController.h */,
+				04025CAC201B323B004280B0 /* AddTaskViewController.m */,
+				04025CAE201B3268004280B0 /* DataHandler.h */,
+				04025CAF201B3268004280B0 /* DataHandler.m */,
+				0489B35D2024611200BD29EC /* UIColorConvert.h */,
+				0489B35E2024611200BD29EC /* UIColorConvert.m */,
 			);
 			path = "Lab3-JohanHjalmarsson";
 			sourceTree = "<group>";
@@ -142,8 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04025CAD201B323B004280B0 /* AddTaskViewController.m in Sources */,
+				0489B35F2024611200BD29EC /* UIColorConvert.m in Sources */,
 				04025C97201B3108004280B0 /* ViewController.m in Sources */,
+				04025CAA201B3224004280B0 /* ToDoTableViewController.m in Sources */,
 				04025CA2201B3108004280B0 /* main.m in Sources */,
+				04025CB0201B3268004280B0 /* DataHandler.m in Sources */,
 				04025C94201B3108004280B0 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XCDJ56B3D4;
 				INFOPLIST_FILE = "Lab3-JohanHjalmarsson/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "JH.Lab3-JohanHjalmarsson";
@@ -292,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XCDJ56B3D4;
 				INFOPLIST_FILE = "Lab3-JohanHjalmarsson/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "JH.Lab3-JohanHjalmarsson";
